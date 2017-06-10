@@ -12,8 +12,10 @@ app.get("/", function(req, res){
 app.use(express.static(__dirname + '/public'));
 
 var io = require('socket.io').listen(app.listen(port));
+// socket is the socket of the client
 io.sockets.on('connection', function(socket) {
     socket.emit('message', {message: 'welcome to the chatroom'});
+    // bind another handler - used as the receiver
     socket.on('send', function(data){
         io.sockets.emit('message', data);
     });
