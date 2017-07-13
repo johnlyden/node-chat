@@ -2,10 +2,19 @@
   "name": "RealTimeWebChat",
   "version": "0.0.0",
   "description": "real time chat application",
+  "homepage": "https://johnlyden.github.io/react-gif-search",
   "author": "",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
   "dependencies": {
-    "socket.io": "latest",
     "express": "latest",
-    "jade": "latest"
+    "gh-pages": "^1.0.0",
+    "jade": "latest",
+    "react-scripts": "^1.0.10",
+    "socket.io": "latest"
   }
 }
